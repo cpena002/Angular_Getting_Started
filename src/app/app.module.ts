@@ -1,14 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser'; // a Component?
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component'; //our app.component.ts file
 import { ProductListComponent } from './products/product-list.component'; //our app.component.ts file
+import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 
 
 //@NgModule is a dcorative? 
 @NgModule({ // The properties are arrays.
-  declarations: [ AppComponent, ProductListComponent ],  // Defines which of our components belong to this module. 
-  imports: [ BrowserModule ], // We defin external modules we want to have available
+  declarations: [ AppComponent, ProductListComponent, ConvertToSpacesPipe ],  // Defines which of our components belong to this module. 
+  imports: [ BrowserModule, FormsModule ], // We defin external modules we want to have available
   /* for all of the components that belong to this module
      the BrowserModule is a module all Angular apps need to import. */
   bootstrap: [AppComponent] // Describes the startup component of the application
