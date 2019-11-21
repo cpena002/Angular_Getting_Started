@@ -6,11 +6,13 @@ import { AppComponent } from './app.component'; //our app.component.ts file
 import { ProductListComponent } from './products/product-list.component'; //our app.component.ts file
 import { ConvertToSpacesPipe } from './shared/convert-to-spaces.pipe';
 import { StartComponent } from './shared/star.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ProductDetailComponent } from './products/product-detail.component'
+import { WelcomeComponent } from './home/welcome.component';
 
 //@NgModule is a dcorative? 
 @NgModule({ // The properties are arrays.
-  declarations: [ AppComponent, ProductListComponent, ConvertToSpacesPipe, StartComponent ],  // Defines which of our components belong to this module. 
+  declarations: [ AppComponent, ProductListComponent, ConvertToSpacesPipe, StartComponent, ProductDetailComponent, WelcomeComponent ],  // Defines which of our components belong to this module. 
   imports: [ BrowserModule, FormsModule, HttpClientModule ], // We defin external modules we want to have available
   /* for all of the components that belong to this module
      the BrowserModule is a module all Angular apps need to import. */
